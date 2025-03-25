@@ -1,0 +1,69 @@
+TWO DIMENSIONAL ARRAYS
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    for(int i = 0; i < 2; i++){
+        for(int j = 0; j < 3 ; j++){
+            cout << arr[i][j]<< endl;
+        }
+    }
+}
+
+/*Program execution :
+    i = 0   j = 0   arr[0][0]
+    i = 0   j = 1   arr[0][1]
+    i = 0   j = 2   arr[0][2]
+    
+    i = 1   j = 0   arr[1][0]
+    i = 1   j = 1   arr[1][1]
+    i = 1   j = 2   arr[1][2]
+    
+    Final output : {1, 2, 3, 4, 5, 6}
+*/
+
+
+
+*********************
+FUNCTION PASSING BY VALUE AND REFERENCE
+
+#include <iostream>
+using namespace std;
+
+int fun(int &, int &);
+
+int main() {
+    
+    int x = 10, y = 20;
+    cout << "Value of X  = " << x << endl;
+    cout << "Value of Y  = " << y << endl;
+    
+    fun(x, y);
+    
+    cout << "Value of X  has change to = " << x << endl;
+    cout << "Value of Y  has change to = " << y << endl;
+        
+    return 0;
+}
+
+int fun(int &a, int &b){
+    a = 20;
+    b = 10;
+}
+
+/*
+- Pass by Value
+    A copy of the argument is passed to the function.
+    Changes made inside the function do not affect the original variabl.
+- Pass by Reference
+    The function receives a reference to the original variable.
+    Changes inside the function affect the original variable.
+*/
+
+
+*******************************************
+ARRAYS PASSS BY REFERENCE 
+
