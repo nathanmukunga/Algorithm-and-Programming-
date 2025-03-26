@@ -1,0 +1,50 @@
+// Printing the 1D array contents in the reverse order
+
+#include <iostream>
+using namespace std;
+
+int reverseOrder(int [], int );
+int main()
+{
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size = sizeof(arr) / sizeof(int);
+    reverseOrder(arr, size);
+    
+    return 0;
+}
+int reverseOrder(int b[], int n){
+    for(int i = n -1 ; i >= 0 ; i--){
+        cout << b[i] << endl;
+    }
+    
+    return b[0];
+}
+
+
+-----------------------------------------------------------------------------------------------
+
+// Create another 1D array to load the input array contents in the  reverse order
+
+
+int reverseOrder(int [],int [], int );
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+    int reverse[5];
+    int size = sizeof(arr) / sizeof(int);
+    
+    reverseOrder(arr, reverse, size);
+    
+    return 0;
+}
+int reverseOrder(int b[],int c[], int n){
+    
+    for(int i = 0 ; i < n ; i++){
+        c[i] = b[n - 1 - i];
+    }    
+    for(int i = 0 ; i < n ; i++){
+        cout << c[i] << endl;
+    }
+    
+    return b[0];
+}
