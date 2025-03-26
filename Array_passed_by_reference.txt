@@ -1,0 +1,26 @@
+using namespace std;
+#include <iostream>
+
+/*Array arguments are passed by reference rather then value.*/
+
+void mutByThree(int []);
+int main() {
+    int arr[] = {3, 7, 12};
+    for(int i = 0; i < 3; i ++){
+        cout << arr[i] << endl;
+    }
+    cout << " " << endl;
+    
+    mutByThree(arr);
+    
+    for(int i = 0; i < 3; i ++){
+        cout << arr[i] << endl;
+    }
+    
+    return 0;
+}
+void mutByThree(int m[]){
+    for(int i = 0; i < 3; i ++){
+        m[i] = m[i] * 3;
+    }
+}

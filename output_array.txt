@@ -1,0 +1,32 @@
+using namespace std;
+#include <iostream>
+
+int main() {
+    
+    /* consider the following array; what is the output of the loop 
+    */
+    int arr[] = {1, 2, 3, 4, 5, 4, 3, 2, 1, 0};
+    int total = 0;
+    
+    for(int i = 0; i < 10; i ++){
+        total = total + arr[i];
+    }
+    cout << "The value of total is : " << total << endl;
+    
+    return 0;
+}
+
+/* Here what happend to Total : 
+
+    1st iteration: total = 0 + 1 = 1
+    2nd iteration: total = 1 + 2 = 3
+    3rd iteration: total = 3 + 3 = 6
+    4th iteration: total = 6 + 4 = 10
+    5th iteration: total = 10 + 5 = 15
+    6th iteration: total = 15 + 4 = 19
+    7th iteration: total = 19 + 3 = 22
+    8th iteration: total = 22 + 2 = 24
+    9th iteration: total = 24 + 1 = 25
+    10th iteration: total = 25 + 0 = 25
+
+*/
